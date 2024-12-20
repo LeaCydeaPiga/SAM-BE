@@ -46,12 +46,12 @@
             <h1 class="rammetto-one-regular text-center mb-5" style="color: #366ABD;">Personality Islands</h1>
             <div class="row">
                 <?php
-              
+
                 $query = "
-                    SELECT ic.*, isp.name, isp.color AS bg_color, ic.color AS text_color, ic.image AS ic_image, isp.shortDescription AS isp_short
-                    FROM islandcontents ic
-                    INNER JOIN islandsofpersonality isp 
-                    ON ic.islandOfPersonalityID = isp.islandOfPersonalityID
+                    SELECT isp.islandOfPersonalityID, isp.name, isp.color AS text_color, isp.image AS isp_image, isp.shortDescription AS isp_short
+                    FROM islandsofpersonality isp
+
+                   
                 ";
 
                 $result = $mysqli->query($query);
@@ -62,17 +62,17 @@
                 ?>
                         <div class="col-lg-4 col-md-6 mb-4 mt-4">
 
-                            <div class="card" style="background-color: <?php echo htmlspecialchars($row['bg_color']); ?>;">
+                            <div class="card">
 
-                                <img src="img/<?php echo htmlspecialchars($row['ic_image']); ?>" class="card-img-top mt-5" alt="<?php echo htmlspecialchars($row['name']); ?>" style="height: 200px; object-fit: cover;">
+                                <img src="img/<?php echo htmlspecialchars($row['isp_image']); ?>" class="card-img-top mt-5" alt="<?php echo htmlspecialchars($row['name']); ?>" style="height: 200px; object-fit: cover;">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="color: <?php echo htmlspecialchars($row['text_color']); ?>;">
+                                    <p class="card-title raleway font-20" style="color: <?php echo htmlspecialchars($row['text_color']); ?>;">
                                         <?php echo htmlspecialchars($row['name']); ?>
-                                    </h5>
+                                    </p>
                                     <p class="card-text"><?php echo htmlspecialchars($row['isp_short']); ?></p>
                                     <div class=" row justify-content-end">
                                         <button class="btn btn-light">
-                                            <a href="details.php?islandID=<?php echo htmlspecialchars($row['islandOfPersonalityID']); ?>" class="text-decoration-none text-dark">Learn More</a>
+                                            <a href="details.php?islandID=<?php echo htmlspecialchars($row['islandOfPersonalityID']); ?>" class="text-decoration-none poppins-light">Learn More</a>
                                         </button>
 
                                     </div>

@@ -1,15 +1,14 @@
 <?php
-// Include database connection
 include 'db_connect.php';
 
 // Get the island ID from URL parameters
 if (isset($_GET['islandID'])) {
-    $islandID = intval($_GET['islandID']); // Sanitize the ID to prevent SQL injection
+    $islandID = intval($_GET['islandID']); 
 } else {
     die("No ID provided.");
 }
 
-// Query to fetch island details
+// fetch islandsofpersonality
 $query = "
     SELECT isp.name, isp.shortDescription, isp.longDescription, isp.image, isp.color
     FROM islandsofpersonality isp
@@ -27,7 +26,7 @@ if ($result && $result->num_rows > 0) {
     die("Island not found.");
 }
 
-// Query to fetch island contents
+// fetch islandcontents
 $contentQuery = "
     SELECT image, content, color
     FROM islandcontents
@@ -52,7 +51,7 @@ $contentResult = $contentStmt->get_result();
                 <p class="poppins-light font-16"><?php echo htmlspecialchars($row['shortDescription']); ?></p>
             </div>
             
-            <!-- Applying floating effect on the image -->
+ 
             <div class="text-center mb-4">
                 <img 
                     src="img/<?php echo htmlspecialchars($row['image']); ?>" 
