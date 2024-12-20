@@ -43,7 +43,7 @@ $contentResult = $contentStmt->get_result();
 
 <?php include 'header.php'; ?>
 
-<body style="background-color: <?php echo htmlspecialchars($row['color']); ?>;">
+<body bg-light>
     <section id="island-details">
         <div class="container mt-5">
             <div class="text-center mb-4">
