@@ -1,0 +1,402 @@
+.montserrat-regular {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-semibold {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.montserrat-medium {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.montserrat-light{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto {
+
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.sans {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.sans-bold {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.font-35 {
+    font-size: 35px;
+}
+.font-25 {
+    font-size: 25px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-17 {
+    font-size: 17px;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.font-13 {
+    font-size: 15px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-left: 25%;
+    overflow-x: hidden;
+}
+
+
+
+/* index */
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    flex-grow: 1;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-link.active {
+    color: #5ED6FF !important;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 119, 207, 0.2);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+
+
+
+.material-icons.active-icon {
+    color: #5ED6FF !important;
+}
+
+
+.content {
+
+    width: 100%;
+    padding: 20px;
+}
+
+.navbar-fixed-lg {
+    display: flex;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/paris.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+
+.horizontal-line {
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+
+}
+
+.admin-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+
+}
+
+.white-icon {
+    color: white;
+    font-size: 18px;
+}
+
+.blue-icon {
+    color: #0077CF;
+}
+
+.blue {
+    color: #0077CF;
+}
+
+.card {
+    background-color: #FCFCFC;
+}
+
+@media (max-width: 992px) {
+
+    body {
+        margin-left: 5% !important;
+    }
+
+    .navbar-fixed-lg {
+        display: none !important;
+    }
+
+    .offcanvas {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/paris.jpg) no-repeat center center;
+    }
+
+    .content {
+        margin-top: 10%;
+    }
+
+
+
+}
+
+
+@media (max-width: 640px) {
+
+
+
+    .content {
+        margin-top: 15% !important;
+    }
+
+    .news-title {
+        font-size: 20px !important;
+    }
+
+    .news-content {
+        font-size: 16px;
+    }
+
+
+}
+
+.text-layered {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.text-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #0077CF;
+    opacity: 21%;
+    font-size: 50px;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.text-front {
+    position: relative;
+    z-index: 2;
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    top: 20px;
+    left: 20px;
+}
+
+.photo {
+    padding: 10px;
+    text-align: center;
+    height: 230px;
+    width: 230px;
+}
+
+.news {
+    background-color: #FCFCFC;
+    border-left: 5px solid #0077CF;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-content {
+    margin-bottom: 10px;
+}
+
+.react-part {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.react-button {
+    cursor: pointer;
+
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+.gradient-text {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0049AA, #5ED6FF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: start;
+    margin-top: 30px;
+}
+
+
+
+.feedback-container {
+    background: linear-gradient(to right, #5ED6FF, #0049AA);
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+.feedback-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-card:last-child {
+    margin-bottom: 0;
+}
+
+.feedback-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.feedback-card p strong {
+    color: #0049AA;
+}
+
+
+
+/* posts */
+
+.postTable {
+    border-left: 3px solid #0077CF;
+
+}
+
+.postButton {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+td {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; 
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+
+th {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; 
+    background-color: #D9D9D9; 
+    font-size: 20px;
+}
+
+.postButton .material-icons{
+    font-size: 15px;
+}
+.postButton {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 14px;
+    }
+    .postButton {
+        font-size: 12px;
+    }
+    .accounts, .posts, .postAdd{
+        margin-top: 30px;
+    }
+}
+
